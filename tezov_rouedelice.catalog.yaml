@@ -1,5 +1,5 @@
 #Common configuration
-domain: com.tezov
+domain: com.tezov.rouedelice
 
 resourcesExcluded:
   - META-INF/DEPENDENCIES
