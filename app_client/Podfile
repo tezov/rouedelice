@@ -1,0 +1,5 @@
+target 'app_client' do
+  use_frameworks!
+  platform :ios, '14.1'
+  pod 'app_client_shared', :path => '../app_client_shared'
+end

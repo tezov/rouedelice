@@ -1,0 +1,16 @@
+PODS:
+  - app_client_shared (1.0)
+
+DEPENDENCIES:
+  - app_client_shared (from `../app_client_shared`)
+
+EXTERNAL SOURCES:
+  app_client_shared:
+    :path: "../app_client_shared"
+
+SPEC CHECKSUMS:
+  app_client_shared: 97490989822ed8a6ccba5a8a8f203c5a575cd76e
+
+PODFILE CHECKSUM: 035198311ff4b5fccce8a19459c4749a1ba55bec
+
+COCOAPODS: 1.12.1
