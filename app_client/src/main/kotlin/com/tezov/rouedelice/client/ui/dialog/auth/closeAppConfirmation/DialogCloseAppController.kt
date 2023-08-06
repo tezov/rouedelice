@@ -33,7 +33,7 @@ class DialogCloseAppController private constructor(
                     //quick fix, never dispose it
                     remember(false)
                 }.get().takeIf {
-                    it.navigationController.isLastRoute || it.navigationController.currentRoute()?.path == Route.Account.path
+                    it.navigationController.isLastRoute || it.navigationController.currentRoute()?.path == Route.Shop.path
                 }?.let {
                     it.show(this)
                     return true

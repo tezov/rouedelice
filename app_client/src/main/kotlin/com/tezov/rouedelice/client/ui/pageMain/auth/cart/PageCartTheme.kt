@@ -1,6 +1,6 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.discover
+package com.tezov.rouedelice.client.ui.pageMain.auth.cart
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -8,7 +8,6 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
@@ -17,8 +16,6 @@ import com.tezov.lib_adr_sdk_core.ui.type.primaire.dpSize
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsIconExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
 
 val PageDiscoverTheme.colors: PageDiscoverTheme.Colors

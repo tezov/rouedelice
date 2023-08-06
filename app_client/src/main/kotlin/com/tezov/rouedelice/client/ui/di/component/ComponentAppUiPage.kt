@@ -4,16 +4,14 @@ package com.tezov.rouedelice.client.ui.di.component
 
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiModal
 import com.tezov.rouedelice.client.ui.di.module.ModuleAppUiPage
-import com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountAction
-import com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountState
-import com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverAction
-import com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverState
-import com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpAction
-import com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpState
-import com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentAction
-import com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentState
-import com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthAction
-import com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthState
+import com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopAction
+import com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopState
+import com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartAction
+import com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartState
+import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction
+import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState
+import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckAction
+import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckState
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeAction
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeState
 import com.tezov.rouedelice.client.ui.pageMain.lobby.splash.PageSplashAction
@@ -48,14 +46,13 @@ object ComponentAppUiPage {
         //--LOBBY-- *******
         fun contextSplash(): ComposableContext<PageSplashState, PageSplashAction>
         fun contextLounge(): ComposableContext<PageLoungeState, PageLoungeAction>
-        fun contextLoginAuth(): ComposableContext<PageLoginAuthState, PageLoginAuthAction>
         //............ *******
 
         //--AUTH-- *******
-        fun contextAccount(): ComposableContext<PageAccountState, PageAccountAction>
-        fun contextDiscover(): ComposableContext<PageDiscoverState, PageDiscoverAction>
-        fun contextPayment(): ComposableContext<PagePaymentState, PagePaymentAction>
-        fun contextHelp(): ComposableContext<PageHelpState, PageHelpAction>
+        fun contextAccount(): ComposableContext<PageShopState, PageShopAction>
+        fun contextDiscover(): ComposableContext<PageCartState, PageCartAction>
+        fun contextPayment(): ComposableContext<PageCheckState, PageCheckAction>
+        fun contextHelp(): ComposableContext<PageMenuState, PageMenuAction>
         //............ *******
 
 

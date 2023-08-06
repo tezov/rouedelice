@@ -18,28 +18,28 @@ sealed class BottomNavigationItems(
         val items: Set<BottomNavigationItemData> by lazy {
             setOf(
                 BottomNavigationItemData(
-                    R.string.nav_btm_account,
-                    R.drawable.ic_home_24dp,
-                    R.drawable.ic_home_line_24dp,
-                    Route.Account
+                    R.string.nav_btm_shop,
+                    R.drawable.ic_shopping_fill_24dp,
+                    R.drawable.ic_shopping_24dp,
+                    Route.Shop
                 ),
                 BottomNavigationItemData(
-                    R.string.nav_btm_discover,
+                    R.string.nav_btm_cart,
                     R.drawable.ic_list_square_24dp,
                     R.drawable.ic_list_24dp,
-                    Route.Discover
+                    Route.Cart
                 ),
                 BottomNavigationItemData(
-                    R.string.nav_btm_payment,
-                    R.drawable.ic_transfert_24dp,
-                    R.drawable.ic_transfert_round_24dp,
-                    Route.Payment
+                    R.string.nav_btm_check,
+                    R.drawable.ic_map_fill_24dp,
+                    R.drawable.ic_map_24dp,
+                    Route.Check
                 ),
                 BottomNavigationItemData(
-                    R.string.nav_btm_help,
-                    R.drawable.ic_help_square_24dp,
-                    R.drawable.ic_help_square_line_24dp,
-                    Route.Help
+                    R.string.nav_btm_menu,
+                    R.drawable.ic_dashboard_24dp,
+                    R.drawable.ic_dashboard_outlined_24dp,
+                    Route.Menu
                 ),
             )
         }

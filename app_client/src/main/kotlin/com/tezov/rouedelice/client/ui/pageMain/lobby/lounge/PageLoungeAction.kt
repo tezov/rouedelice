@@ -21,8 +21,4 @@ class PageLoungeAction private constructor(
     }
 
 
-    fun onClickConnect() {
-        navigationController.requestNavigate(Route.LoginAuth, this)
-    }
-
 }

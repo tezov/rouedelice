@@ -1,6 +1,6 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.account
+package com.tezov.rouedelice.client.ui.pageMain.auth.shop
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -10,8 +10,6 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.tezov.rouedelice.client.ui.theme.ThemeComponentProviders
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_sdk_core.ui.component.chunk.Icon
 import com.tezov.lib_adr_sdk_core.ui.component.layout.ColumnCollapsibleHeader
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitFrameStateColor

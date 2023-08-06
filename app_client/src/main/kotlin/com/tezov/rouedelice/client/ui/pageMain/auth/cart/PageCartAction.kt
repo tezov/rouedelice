@@ -1,24 +1,25 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.payment
+package com.tezov.rouedelice.client.ui.pageMain.auth.cart
 
 import com.tezov.lib_adr_sdk_core.navigation.NavigationController
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager.NotImplemented
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.PageAction
 
-class PagePaymentAction private constructor(
+class PageCartAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PagePaymentState> {
+    PageAction<PageCartState> {
 
 
     companion object {
 
         fun create(
             navigationController: NavigationController
-        ) = PagePaymentAction(
+        ) = PageCartAction(
             navigationController = navigationController,
         )
     }
+
+
 
 }

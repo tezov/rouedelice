@@ -1,45 +1,40 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.help
+package com.tezov.rouedelice.client.ui.pageMain.auth.cart
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
-import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.ui.component.chunk.Text
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
 import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 
-object PageHelp : Page<PageHelpState, PageHelpAction> {
+object PageCart : Page<PageCartState, PageCartAction> {
 
     @Composable
-    override fun Page<PageHelpState, PageHelpAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
-        val accessor = DiAccessorAppUiPage().with(key = this).contextHelp().apply {
+    override fun Page<PageCartState, PageCartAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
+        val accessor = DiAccessorAppUiPage().with(key = this).contextDiscover().apply {
             remember()
         }
         val action = accessor.action()
         val state = accessor.state()
+
         ExtensionCompositionLocal.CompositionLocalProvider(
             ancestor = arrayOf(
-                PageHelpTheme provides PageHelpTheme.provideColors(),
+                PageDiscoverTheme provides PageDiscoverTheme.provideColors(),
+                PageDiscoverTheme provides PageDiscoverTheme.provideDimensions(),
             ),
             parent = {
                 arrayOf(
-                    PageHelpTheme provides PageHelpTheme.provideTypographies(),
+                    PageDiscoverTheme provides PageDiscoverTheme.provideTypographies(),
                 )
             },
             child = {
                 arrayOf(
-                    PageHelpTheme provides PageHelpTheme.provideStyles(),
+                    PageDiscoverTheme provides PageDiscoverTheme.provideStyles(),
                 )
             }
         ) {

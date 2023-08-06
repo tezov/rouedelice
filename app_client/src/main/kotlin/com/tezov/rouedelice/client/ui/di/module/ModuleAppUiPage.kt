@@ -31,14 +31,6 @@ interface ModuleAppUiPage {
             action: Action.PageLoungeAction
         ) = ComposableContext(state, action)
 
-
-        @ScopeAppUiPage
-        @Provides
-        fun provideContextDialogLoginAuth(
-            state: State.DialogLoginAuthState,
-            action: Action.DialogLoginAuthAction
-        ) = ComposableContext(state, action)
-
         //............ *******
 
         //--AUTH-- *******
@@ -108,43 +100,35 @@ interface ModuleAppUiPage {
             override fun create() = com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeState.create()
         }
 
-        @ScopeAppUiPage
-        class DialogLoginAuthState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthState>() {
-            @androidx.compose.runtime.Composable
-            override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthState.create()
-        }
-
         //............ *******
 
         //--AUTH-- *******
         @ScopeAppUiPage
         class PageAccountState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountState>() {
+            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountState.create()
+            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopState.create()
         }
 
         @ScopeAppUiPage
         class PageDiscoverState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverState>() {
+            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverState.create()
+            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartState.create()
         }
 
         @ScopeAppUiPage
         class PageHelpState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpState>() {
+            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpState.create()
+            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState.create()
         }
 
         @ScopeAppUiPage
         class PagePaymentState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentState>() {
+            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentState.create()
+            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckState.create()
         }
 
         //............ *******
@@ -175,19 +159,6 @@ interface ModuleAppUiPage {
                 )
         }
 
-        @ScopeAppUiPage
-        class DialogLoginAuthAction @Inject constructor(
-            private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
-            private val dialogAction: ModuleCoreUiActivity.Action.DialogAction,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthAction>() {
-            @androidx.compose.runtime.Composable
-            override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuthAction.create(
-                    navigationController.get(),
-                    dialogAction.get()
-                )
-        }
-
         //............ *******
 
         //--AUTH-- *******
@@ -195,10 +166,10 @@ interface ModuleAppUiPage {
         class PageAccountAction @Inject constructor(
             private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
             private val bottomSheetAction: ModuleCoreUiActivity.Action.BottomSheetAction,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountAction>() {
+        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopAction>() {
             @androidx.compose.runtime.Composable
             override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccountAction.create(
+                com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopAction.create(
                     navigationController.get(),
                     bottomSheetAction.get()
                 )
@@ -207,10 +178,10 @@ interface ModuleAppUiPage {
         @ScopeAppUiPage
         class PageDiscoverAction @Inject constructor(
             private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverAction>() {
+        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartAction>() {
             @androidx.compose.runtime.Composable
             override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscoverAction.create(
+                com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartAction.create(
                     navigationController.get()
                 )
         }
@@ -218,10 +189,10 @@ interface ModuleAppUiPage {
         @ScopeAppUiPage
         class PageHelpAction @Inject constructor(
             private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpAction>() {
+        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction>() {
             @androidx.compose.runtime.Composable
             override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelpAction.create(
+                com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction.create(
                     navigationController.get()
                 )
         }
@@ -229,10 +200,10 @@ interface ModuleAppUiPage {
         @ScopeAppUiPage
         class PagePaymentAction @Inject constructor(
             private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentAction>() {
+        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckAction>() {
             @androidx.compose.runtime.Composable
             override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePaymentAction.create(
+                com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckAction.create(
                     navigationController.get()
                 )
         }

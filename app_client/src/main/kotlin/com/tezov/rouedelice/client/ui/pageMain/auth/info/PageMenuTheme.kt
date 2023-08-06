@@ -1,6 +1,6 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.help
+package com.tezov.rouedelice.client.ui.pageMain.auth.info
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
@@ -8,12 +8,10 @@ import androidx.compose.runtime.ProvidableCompositionLocal
 import androidx.compose.runtime.ReadOnlyComposable
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
-import com.tezov.rouedelice.client.ui.theme.ThemeComponentProviders
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.dimensionsPaddingExtended
 import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
 
 val PageHelpTheme.colors: PageHelpTheme.Colors

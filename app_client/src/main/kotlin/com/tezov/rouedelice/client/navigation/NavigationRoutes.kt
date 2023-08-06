@@ -36,25 +36,24 @@ class NavigationRoutes(
         //LOBBY
         object Splash : NavigationRouteManager.Route("splash")
         object Lounge : NavigationRouteManager.Route("lounge")
-        object LoginAuth : NavigationRouteManager.Route("login_auth")
         object NavLobby : Routes(
             "navLobby",
-            child = setOf(Splash, Lounge, LoginAuth)
+            child = setOf(Splash, Lounge)
         )
 
         //AUTH
-        object Account : NavigationRouteManager.Route("account")
-        object Discover : NavigationRouteManager.Route("discover")
-        object Payment : NavigationRouteManager.Route("payment")
-        object Help : NavigationRouteManager.Route("help")
+        object Shop : NavigationRouteManager.Route("shop")
+        object Cart : NavigationRouteManager.Route("cart")
+        object Check : NavigationRouteManager.Route("check")
+        object Menu : NavigationRouteManager.Route("menu")
         object NavAuth : Routes(
             "navAuth",
-            child = setOf(Account, Discover, Payment, Help)
+            child = setOf(Shop, Cart, Check, Menu)
         )
 
         val startNavRoute = NavAuth
         val startLobbyRoute = Splash
-        val startAuthRoute = Account
+        val startAuthRoute = Shop
     }
 
     init {
@@ -150,37 +149,6 @@ class NavigationRoutes(
                         }
                     }
                 }
-                Lounge -> {
-                    when (request.to) {
-                        LoginAuth -> {
-                            navigate(
-                                this@NavigationRoutes,
-                                request = request
-                            )
-                            failedToNavigate = false
-                        }
-                    }
-                }
-                LoginAuth -> {
-                    when (request.to) {
-                        NavAuth -> {
-                            navigate(
-                                this@NavigationRoutes,
-                                request = request.apply {
-                                    option = option ?: Option.ClearStack()
-                                }
-                            )
-                            failedToNavigate = false
-                        }
-                        Back -> {
-                            navigateBack(
-                                this@NavigationRoutes,
-                                request = request
-                            )
-                            failedToNavigate = false
-                        }
-                    }
-                }
             }
             if (failedToNavigate) {
                 navigateException(NotHandled.wrap(request))
@@ -192,7 +160,7 @@ class NavigationRoutes(
         with(controller) {
             var failedToNavigate = true
             when (request.from) {
-                Account, Discover, Payment, Help  -> {
+                Shop, Cart, Check, Menu  -> {
                     when (request.to) {
                         Finish -> {
                             navigate(

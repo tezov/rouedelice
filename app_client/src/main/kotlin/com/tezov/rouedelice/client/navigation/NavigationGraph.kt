@@ -11,21 +11,18 @@ import androidx.navigation.navigation
 import com.tezov.rouedelice.client.navigation.NavigationRoutes.Route
 import com.tezov.rouedelice.client.ui.activity.MainActivity
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiActivity
-import com.tezov.rouedelice.client.ui.pageMain.auth.account.PageAccount
-import com.tezov.rouedelice.client.ui.pageMain.auth.discover.PageDiscover
-import com.tezov.rouedelice.client.ui.pageMain.auth.help.PageHelp
-import com.tezov.rouedelice.client.ui.pageMain.auth.payment.PagePayment
-import com.tezov.rouedelice.client.ui.pageMain.lobby.loginAuth.PageLoginAuth
+import com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShop
+import com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCart
+import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenu
+import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheck
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLounge
 import com.tezov.rouedelice.client.ui.pageMain.lobby.splash.PageSplash
 import com.tezov.lib_adr_sdk_core.navigation.NavHost
 import com.tezov.lib_adr_sdk_core.navigation.NavigationAnimation
-import com.tezov.lib_adr_sdk_core.navigation.NavigationAnimation.Slide.Effect
 import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
 import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_sdk_core.navigation.navigator.composable.composableTransient
 import com.tezov.lib_adr_sdk_core.navigation.navigator.composableOverlay.composableOverlay
-import com.tezov.lib_adr_sdk_core.navigation.top_app_bar.TopAppBarItemData
 import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
 import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
 
@@ -56,52 +53,37 @@ object NavigationGraph {
                         PageLounge(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
-                composableOverlay(
-                    route = Route.LoginAuth,
-                    animationConfig = NavigationAnimation.Config{
-                        enter {
-                            pop = NavigationAnimation.Config.Type.None
-                        }
-                        exit {
-                            push = NavigationAnimation.Config.Type.None
-                        }
-                    }
-                ) { graphEntry ->
-                    (LocalActivity.current as MainActivity).empty { innerPadding ->
-                        PageLoginAuth(graphEntry = graphEntry, innerPadding = innerPadding)
-                    }
-                }
             }
             navigation(
                 route = Route.NavAuth,
                 startRoute = NavigationRoutes.startAuthRoute
             ) {
                 composableTransient(
-                    route = Route.Account
+                    route = Route.Shop
                 ) { graphEntry ->
                     (LocalActivity.current as MainActivity).withBottomNavigationBar { innerPadding ->
-                        PageAccount(graphEntry = graphEntry, innerPadding = innerPadding)
+                        PageShop(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
                 composableTransient(
-                    route = Route.Discover
+                    route = Route.Cart
                 ) { graphEntry ->
                     (LocalActivity.current as MainActivity).withBottomNavigationBar { innerPadding ->
-                        PageDiscover(graphEntry = graphEntry, innerPadding = innerPadding)
+                        PageCart(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
                 composableTransient(
-                    route = Route.Payment
+                    route = Route.Check
                 ) { graphEntry ->
                     (LocalActivity.current as MainActivity).withBottomNavigationBar { innerPadding ->
-                        PagePayment(graphEntry = graphEntry, innerPadding = innerPadding)
+                        PageCheck(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
                 composableTransient(
-                    route = Route.Help
+                    route = Route.Menu
                 ) { graphEntry ->
                     (LocalActivity.current as MainActivity).withBottomNavigationBar { innerPadding ->
-                        PageHelp(graphEntry = graphEntry, innerPadding = innerPadding)
+                        PageMenu(graphEntry = graphEntry, innerPadding = innerPadding)
                     }
                 }
             }
