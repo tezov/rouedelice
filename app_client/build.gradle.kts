@@ -53,7 +53,7 @@ android {
 
 dependencies {
     implementation(project(":app_client_shared"))
-    implementation(project(":lib_adr_sdk_core"))
+    implementation(project(":lib_adr_app_core"))
     tezovCatalog {
         with("projectPath.dependencies.adr_core") {
             implementation(string("dagger"))

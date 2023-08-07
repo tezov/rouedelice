@@ -5,11 +5,11 @@ package com.tezov.rouedelice.client.ui.di.accessor
 import androidx.compose.runtime.Composable
 import com.tezov.rouedelice.client.ui.di.component.ComponentAppUiActivity
 import com.tezov.rouedelice.client.ui.di.component.DaggerComponentAppUiActivity_EntryPoint
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessor
-import com.tezov.lib_adr_sdk_core.ui.di.accessor.DiAccessorCoreUiActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalCoreApplication
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessor
+import com.tezov.lib_adr_app_core.ui.di.accessor.DiAccessorCoreUiActivity
 import com.tezov.rouedelice.client.application.Application
 
 class DiAccessorAppUiActivity protected constructor() :

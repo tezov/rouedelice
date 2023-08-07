@@ -16,10 +16,10 @@ import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeAction
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeState
 import com.tezov.rouedelice.client.ui.pageMain.lobby.splash.PageSplashAction
 import com.tezov.rouedelice.client.ui.pageMain.lobby.splash.PageSplashState
-import com.tezov.lib_adr_sdk_core.ui.di.annotation.scope.ScopeAppUiPage
-import com.tezov.lib_adr_sdk_core.ui.di.common.ComposableContext
-import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiActivity
-import com.tezov.lib_adr_sdk_core.ui.di.component.ComponentCoreUiPage
+import com.tezov.rouedelice.client.ui.di.annotation.scope.ScopeAppUiPage
+import com.tezov.lib_adr_app_core.ui.di.common.ComposableContext
+import com.tezov.lib_adr_app_core.ui.di.component.ComponentCoreUiActivity
+import com.tezov.lib_adr_app_core.ui.di.component.ComponentCoreUiPage
 import dagger.Component
 
 object ComponentAppUiPage {

@@ -10,13 +10,14 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.DpSize
-import com.tezov.lib_adr_sdk_core.ui.type.primaire.dpSize
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitText.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_sdk_core.ui.theme.style.OutfitTextStateColor
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.colorsExtended
-import com.tezov.lib_adr_sdk_core.ui.theme.theme.typographiesExtended
+import com.tezov.lib_adr_ui_core.theme.style.OutfitFrameStateColor
+import com.tezov.lib_adr_ui_core.theme.style.OutfitShape.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
+import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
+import com.tezov.lib_adr_ui_core.theme.theme.*
+import com.tezov.lib_adr_ui_core.type.primaire.DpSize
+import com.tezov.lib_adr_ui_core.type.primaire.dpSize
 
 val PageDiscoverTheme.colors: PageDiscoverTheme.Colors
     @Composable

@@ -17,14 +17,14 @@ import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenu
 import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheck
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLounge
 import com.tezov.rouedelice.client.ui.pageMain.lobby.splash.PageSplash
-import com.tezov.lib_adr_sdk_core.navigation.NavHost
-import com.tezov.lib_adr_sdk_core.navigation.NavigationAnimation
-import com.tezov.lib_adr_sdk_core.navigation.NavigationRouteManager
-import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.navigation.navigator.composable.composableTransient
-import com.tezov.lib_adr_sdk_core.navigation.navigator.composableOverlay.composableOverlay
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_app_core.navigation.NavHost
+import com.tezov.lib_adr_app_core.navigation.NavigationAnimation
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager
+import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.composable.composableTransient
+import com.tezov.lib_adr_app_core.navigation.navigator.composableOverlay.composableOverlay
+import com.tezov.lib_adr_app_core.ui.compositionTree.activity.Activity.Companion.LocalActivity
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 
 object NavigationGraph {
 

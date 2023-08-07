@@ -6,11 +6,11 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
-import com.tezov.lib_adr_sdk_core.navigation.navigator.GraphEntry
-import com.tezov.lib_adr_sdk_core.ui.compositionTree.page.Page
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.action
-import com.tezov.lib_adr_sdk_core.ui.di.common.ExtensionCoreUi.state
-import com.tezov.lib_adr_sdk_core.ui.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
+import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
+import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
 
 object PageCheck : Page<PageCheckState, PageCheckAction> {
 

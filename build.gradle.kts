@@ -3,7 +3,7 @@ plugins {
 }
 
 tezovCatalog {
-    catalogFile = catalogFromFile("${project.projectDir}/tezov_rouedelice.catalog.yaml")
+    catalogFile = catalogFromFile("${project.projectDir}/catalog.rouedelice.yaml")
     configureProjects()
 
 //    val ignore_alpha = true

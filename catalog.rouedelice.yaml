@@ -1,0 +1,38 @@
+#Common configuration
+domain: com.tezov.rouedelice
+
+#Dependencies
+#dependencies catalog outside project, not in this git repo (check copy in you need it)
+dependencies : ${file://../../catalog.dependencies.yaml}
+
+#Modules configuration
+app_client:
+  - ${plugin.application}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
+lib_adr_app_core:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
+lib_adr_ui_cpt:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
+lib_adr_ui_core:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
+lib_adr_core:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
+lib_kmm_core:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}
