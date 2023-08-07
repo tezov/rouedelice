@@ -55,11 +55,11 @@ dependencies {
     implementation(project(":app_client_shared"))
     implementation(project(":lib_adr_sdk_core"))
     tezovCatalog {
-        with("projectPath.dependencies.core") {
+        with("projectPath.dependencies.adr_core") {
             implementation(string("dagger"))
             kapt(string("dagger_kapt"))
         }
-        with("projectPath.dependencies_debug.compose") {
+        with("projectPath.dependencies_debug.adr_compose") {
             implementation(string("ui_tooling_preview"))
             debugImplementation(string("ui_tooling"))
             debugImplementation(string("ui_manifest"))
