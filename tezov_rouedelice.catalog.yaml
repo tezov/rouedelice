@@ -200,3 +200,8 @@ lib_adr_core:
   - ${plugin.kotlin}
   - ${plugin.kapt}
   - ${plugin.tezov_project_config}
+lib_kmm_core:
+  - ${plugin.library}
+  - ${plugin.kotlin}
+  - ${plugin.kapt}
+  - ${plugin.tezov_project_config}

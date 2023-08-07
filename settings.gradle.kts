@@ -4,12 +4,15 @@ include(
     ":app_client_shared",
     ":lib_adr_sdk_core",
     ":lib_adr_core",
+    ":lib_kmm_core",
 )
 
 project(":lib_adr_sdk_core")
     .projectDir = file("../../lib_adr_sdk_core/")
 project(":lib_adr_core")
     .projectDir = file("../../lib_adr_core/")
+project(":lib_kmm_core")
+    .projectDir = file("../../lib_kmm_core/")
 
 pluginManagement {
 
