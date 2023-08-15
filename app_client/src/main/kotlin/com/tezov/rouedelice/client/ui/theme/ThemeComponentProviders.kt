@@ -21,12 +21,6 @@ import com.tezov.lib_adr_app_core.ui.composition.activity.sub.bottomsheet.Bottom
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.Dialog
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.Snackbar
 import com.tezov.lib_adr_app_core.ui.theme.theme.ThemeComponentExtended
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalRoller
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalRoller.Simple.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.*
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.*
 import com.tezov.lib_adr_ui_core.theme.style.OutfitBorder.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitFrame.StateColor.Style.Companion.copy
@@ -36,6 +30,12 @@ import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.asTextStateColor
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.theme.*
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalRoller
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.TextField
 
 object ThemeComponentProviders {
 

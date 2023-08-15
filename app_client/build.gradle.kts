@@ -1,6 +1,7 @@
 tezovConfig {
     configuration {
         domain = tezovCatalog.string("domain")
+        subDomain = tezovCatalog.string("sub_domain")
     }
     version {
         major = 0

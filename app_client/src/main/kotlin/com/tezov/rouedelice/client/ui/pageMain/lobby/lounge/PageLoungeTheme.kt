@@ -32,14 +32,14 @@ import com.tezov.lib_adr_ui_core.theme.theme.shapesExtended
 import com.tezov.lib_adr_ui_core.theme.theme.typographiesExtended
 import com.tezov.lib_adr_ui_core.type.primaire.DpSize
 import com.tezov.lib_adr_ui_core.type.primaire.dpSize
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager
-import com.tezov.lib_adr_ui_cpt.core.component.block.HorizontalPager.WithIndicator.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Button.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.DropDownMenu.StateColor.Style.Companion.copy
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Image
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager
+import com.tezov.lib_adr_ui_cpt.component.core.block.HorizontalPager.WithIndicator.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Button.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.DropDownMenu.StateColor.Style.Companion.copy
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Image
 import com.tezov.rouedelice.client.ui.theme.ThemeComponentProviders
 
 val PageLoungeTheme.colors: PageLoungeTheme.Colors

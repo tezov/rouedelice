@@ -10,14 +10,14 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import com.tezov.lib_adr_ui_cpt.core.component.chunk.Icon
-import com.tezov.lib_adr_ui_cpt.core.component.layout.ColumnCollapsibleHeader
 import com.tezov.lib_adr_ui_core.theme.style.OutfitFrameStateColor
 import com.tezov.lib_adr_ui_core.theme.style.OutfitShape.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitState.Simple.Style.Companion.asStateSimple
 import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Companion.copy
 import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
 import com.tezov.lib_adr_ui_core.theme.theme.*
+import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
+import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 
 val PageAccountTheme.colors: PageAccountTheme.Colors
     @Composable

@@ -37,8 +37,8 @@ sealed class BottomNavigationItems(
                 ),
                 BottomNavigationItemData(
                     R.string.nav_btm_menu,
-                    R.drawable.ic_dashboard_24dp,
-                    R.drawable.ic_dashboard_outlined_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_dashboard_fill_24dp,
+                    com.tezov.lib_adr_ui_cpt.R.drawable.ic_dashboard_24dp,
                     Route.Menu
                 ),
             )

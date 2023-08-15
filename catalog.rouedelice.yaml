@@ -1,5 +1,6 @@
 #Common configuration
-domain: com.tezov.rouedelice
+domain: com.tezov
+sub_domain: rouedelice
 
 #Dependencies
 #dependencies catalog outside project, not in this git repo (check copy in you need it)
