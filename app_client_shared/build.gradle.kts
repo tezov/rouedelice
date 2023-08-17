@@ -24,7 +24,7 @@ kotlin {
         homepage = "Link to the Shared Module homepage"
         version = "1.0"
         ios.deploymentTarget = "14.1"
-        podfile = project.file("../app_client/Podfile")
+        podfile = project.file("../app_client_ios/Podfile")
         framework {
             baseName = "app_client_shared"
         }

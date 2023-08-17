@@ -7,7 +7,7 @@ sub_domain: rouedelice
 dependencies : ${file://../../catalog.dependencies.yaml}
 
 #Modules configuration
-app_client:
+app_client_android:
   - ${plugin.application}
   - ${plugin.kotlin}
   - ${plugin.kapt}

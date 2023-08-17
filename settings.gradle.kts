@@ -1,6 +1,7 @@
 rootProject.name = "client"
 include(
-    ":app_client",
+    ":app_client_ios",
+    ":app_client_android",
     ":app_client_shared",
     ":lib_adr_app_core",
     ":lib_adr_ui_cpt",
