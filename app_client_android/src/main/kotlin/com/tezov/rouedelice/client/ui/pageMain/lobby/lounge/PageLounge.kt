@@ -1,15 +1,16 @@
-
-
 package com.tezov.rouedelice.client.ui.pageMain.lobby.lounge
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.Modifier
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state
 import com.tezov.lib_adr_ui_core.extension.ExtensionCompositionLocal
+import com.tezov.lib_adr_ui_core.theme.style.background
 
 object PageLounge : Page<PageLoungeState, PageLoungeAction> {
 
@@ -41,7 +42,12 @@ object PageLounge : Page<PageLoungeState, PageLoungeAction> {
                 )
             }
         ) {
+            Box(
+                modifier = Modifier.fillMaxSize()
+                    .background(PageLoungeTheme.colors.background)
+            ) {
 
+            }
         }
     }
 

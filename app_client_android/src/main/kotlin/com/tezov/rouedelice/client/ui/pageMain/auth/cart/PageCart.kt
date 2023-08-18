@@ -2,8 +2,10 @@
 
 package com.tezov.rouedelice.client.ui.pageMain.auth.cart
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
@@ -16,7 +18,7 @@ object PageCart : Page<PageCartState, PageCartAction> {
 
     @Composable
     override fun Page<PageCartState, PageCartAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
-        val accessor = DiAccessorAppUiPage().with(key = this).contextDiscover().apply {
+        val accessor = DiAccessorAppUiPage().with(key = this).contextCart().apply {
             remember()
         }
         val action = accessor.action()
@@ -24,21 +26,26 @@ object PageCart : Page<PageCartState, PageCartAction> {
 
         ExtensionCompositionLocal.CompositionLocalProvider(
             ancestor = arrayOf(
-                PageDiscoverTheme provides PageDiscoverTheme.provideColors(),
-                PageDiscoverTheme provides PageDiscoverTheme.provideDimensions(),
+                PageCartTheme provides PageCartTheme.provideColors(),
+                PageCartTheme provides PageCartTheme.provideDimensions(),
             ),
             parent = {
                 arrayOf(
-                    PageDiscoverTheme provides PageDiscoverTheme.provideTypographies(),
+                    PageCartTheme provides PageCartTheme.provideTypographies(),
                 )
             },
             child = {
                 arrayOf(
-                    PageDiscoverTheme provides PageDiscoverTheme.provideStyles(),
+                    PageCartTheme provides PageCartTheme.provideStyles(),
                 )
             }
         ) {
+            Box(
+                modifier = Modifier.fillMaxSize()
+                    .background(PageCartTheme.colors.background)
+            ) {
 
+            }
         }
     }
 

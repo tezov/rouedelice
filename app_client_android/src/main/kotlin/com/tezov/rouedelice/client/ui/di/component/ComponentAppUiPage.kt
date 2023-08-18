@@ -49,10 +49,10 @@ object ComponentAppUiPage {
         //............ *******
 
         //--AUTH-- *******
-        fun contextAccount(): ComposableContext<PageShopState, PageShopAction>
-        fun contextDiscover(): ComposableContext<PageCartState, PageCartAction>
-        fun contextPayment(): ComposableContext<PageCheckState, PageCheckAction>
-        fun contextHelp(): ComposableContext<PageMenuState, PageMenuAction>
+        fun contextShop(): ComposableContext<PageShopState, PageShopAction>
+        fun contextCart(): ComposableContext<PageCartState, PageCartAction>
+        fun contextCheck(): ComposableContext<PageCheckState, PageCheckAction>
+        fun contextMenu(): ComposableContext<PageMenuState, PageMenuAction>
         //............ *******
 
 

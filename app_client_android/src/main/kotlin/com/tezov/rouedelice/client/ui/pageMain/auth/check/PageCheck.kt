@@ -2,8 +2,10 @@
 
 package com.tezov.rouedelice.client.ui.pageMain.auth.check
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation.DialogCloseAppController
 import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
@@ -18,28 +20,33 @@ object PageCheck : Page<PageCheckState, PageCheckAction> {
 
     @Composable
     override fun Page<PageCheckState, PageCheckAction>.content(graphEntry: GraphEntry, innerPadding: PaddingValues) {
-        val accessor = DiAccessorAppUiPage().with(key = this).contextPayment().apply {
+        val accessor = DiAccessorAppUiPage().with(key = this).contextCheck().apply {
             remember()
         }
         val action = accessor.action()
         val state = accessor.state()
         ExtensionCompositionLocal.CompositionLocalProvider(
             ancestor = arrayOf(
-                PagePaymentTheme provides PagePaymentTheme.provideColors(),
-                PagePaymentTheme provides PagePaymentTheme.provideDimensions(),
+                PageCheckTheme provides PageCheckTheme.provideColors(),
+                PageCheckTheme provides PageCheckTheme.provideDimensions(),
             ),
             parent = {
                 arrayOf(
-                    PagePaymentTheme provides PagePaymentTheme.provideTypographies(),
+                    PageCheckTheme provides PageCheckTheme.provideTypographies(),
                 )
             },
             child = {
                 arrayOf(
-                    PagePaymentTheme provides PagePaymentTheme.provideStyles(),
+                    PageCheckTheme provides PageCheckTheme.provideStyles(),
                 )
             }
         ) {
+            Box(
+                modifier = Modifier.fillMaxSize()
+                    .background(PageCheckTheme.colors.background)
+            ) {
 
+            }
         }
     }
 

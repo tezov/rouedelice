@@ -194,33 +194,6 @@ object ThemeComponentProviders {
     )
 
     @Composable
-    fun textFieldLight() = TextField.StateColor.Style(
-        outfitText = MaterialTheme.typographiesExtended.input.normal.copy {
-            outfitState = MaterialTheme.colorsExtended.onPrimary.default.asStateSimple
-        },
-        outfitLabel= MaterialTheme.typographiesExtended.label.normal.copy {
-            outfitState = MaterialTheme.colorsExtended.primary.accent.asStateSimple
-            typo = typo.copy(fontWeight = FontWeight.Bold)
-        },
-        outfitPlaceholder= MaterialTheme.typographiesExtended.caption.normal.copy {
-            outfitState = MaterialTheme.colorsExtended.primary.fade.asStateSimple
-        },
-        styleIconStart = Icon.StateColor.Style(
-            size = MaterialTheme.dimensionsIconExtended.fieldInfo.normal,
-            tint = MaterialTheme.colorsExtended.onPrimary.default,
-        ),
-        styleIconEnd = Icon.StateColor.Style(
-            size = MaterialTheme.dimensionsIconExtended.fieldAction.normal,
-            tint = MaterialTheme.colorsExtended.onPrimary.default,
-        ),
-        colorCursor = MaterialTheme.colorsExtended.primary.accent.asStateInput,
-        colorLine = OutfitStateInput(
-            focused = MaterialTheme.colorsExtended.primary.accent,
-            unfocused = Color.Transparent,
-        )
-    )
-
-    @Composable
     fun dropDownMenu() = DropDownMenu.StateColor.Style(
         outfitText = MaterialTheme.typographiesExtended.menu.normal.copy {
             outfitState = MaterialTheme.colorsExtended.onBackgroundModal.default.asStateSimple
@@ -254,8 +227,5 @@ object ThemeComponentProviders {
         sizeIndicator = 12.dp,
         spacingIndicator = MaterialTheme.dimensionsPaddingExtended.element.big.horizontal,
     )
-
-    @Composable
-    fun rollerStyle() = HorizontalRoller.Simple.Style()
 
 }

@@ -17,37 +17,37 @@ import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
 import com.tezov.lib_adr_ui_core.theme.theme.*
 import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 
-val PagePaymentTheme.colors: PagePaymentTheme.Colors
+val PageCheckTheme.colors: PageCheckTheme.Colors
     @Composable
     @ReadOnlyComposable
     get() = localColors.current
 
-infix fun PagePaymentTheme.provides(value: PagePaymentTheme.Colors) = localColors provides value
+infix fun PageCheckTheme.provides(value: PageCheckTheme.Colors) = localColors provides value
 
-val PagePaymentTheme.dimensions: PagePaymentTheme.Dimensions
+val PageCheckTheme.dimensions: PageCheckTheme.Dimensions
     @Composable
     @ReadOnlyComposable
     get() = localDimensions.current
 
-infix fun PagePaymentTheme.provides(value: PagePaymentTheme.Dimensions) =
+infix fun PageCheckTheme.provides(value: PageCheckTheme.Dimensions) =
     localDimensions provides value
 
-val PagePaymentTheme.typographies: PagePaymentTheme.Typographies
+val PageCheckTheme.typographies: PageCheckTheme.Typographies
     @Composable
     @ReadOnlyComposable
     get() = localTypographies.current
 
-infix fun PagePaymentTheme.provides(value: PagePaymentTheme.Typographies) =
+infix fun PageCheckTheme.provides(value: PageCheckTheme.Typographies) =
     localTypographies provides value
 
-val PagePaymentTheme.styles: PagePaymentTheme.Style
+val PageCheckTheme.styles: PageCheckTheme.Style
     @Composable
     @ReadOnlyComposable
     get() = localStyles.current
 
-infix fun PagePaymentTheme.provides(value: PagePaymentTheme.Style) = localStyles provides value
+infix fun PageCheckTheme.provides(value: PageCheckTheme.Style) = localStyles provides value
 
-object PagePaymentTheme {
+object PageCheckTheme {
 
     data class Colors(
         val background: Color,

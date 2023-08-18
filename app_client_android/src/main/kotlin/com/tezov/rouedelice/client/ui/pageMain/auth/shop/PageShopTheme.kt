@@ -19,38 +19,38 @@ import com.tezov.lib_adr_ui_core.theme.theme.*
 import com.tezov.lib_adr_ui_cpt.component.core.chunk.Icon
 import com.tezov.lib_adr_ui_cpt.component.core.layout.ColumnCollapsibleHeader
 
-val PageAccountTheme.colors: PageAccountTheme.Colors
+val PageShopTheme.colors: PageShopTheme.Colors
     @Composable
     @ReadOnlyComposable
     get() = localColors.current
 
-infix fun PageAccountTheme.provides(value: PageAccountTheme.Colors) = localColors provides value
+infix fun PageShopTheme.provides(value: PageShopTheme.Colors) = localColors provides value
 
-val PageAccountTheme.dimensions: PageAccountTheme.Dimensions
+val PageShopTheme.dimensions: PageShopTheme.Dimensions
     @Composable
     @ReadOnlyComposable
     get() = localDimensions.current
 
-infix fun PageAccountTheme.provides(value: PageAccountTheme.Dimensions) =
+infix fun PageShopTheme.provides(value: PageShopTheme.Dimensions) =
     localDimensions provides value
 
-val PageAccountTheme.typographies: PageAccountTheme.Typographies
+val PageShopTheme.typographies: PageShopTheme.Typographies
     @Composable
     @ReadOnlyComposable
     get() = localTypographies.current
 
-infix fun PageAccountTheme.provides(value: PageAccountTheme.Typographies) =
+infix fun PageShopTheme.provides(value: PageShopTheme.Typographies) =
     localTypographies provides value
 
-val PageAccountTheme.styles: PageAccountTheme.Style
+val PageShopTheme.styles: PageShopTheme.Style
     @Composable
     @ReadOnlyComposable
     get() = localStyles.current
 
-infix fun PageAccountTheme.provides(value: PageAccountTheme.Style) = localStyles provides value
+infix fun PageShopTheme.provides(value: PageShopTheme.Style) = localStyles provides value
 
 
-object PageAccountTheme {
+object PageShopTheme {
 
     data class Colors(
         val background: Color,

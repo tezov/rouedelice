@@ -17,37 +17,37 @@ import com.tezov.lib_adr_ui_core.theme.theme.*
 import com.tezov.lib_adr_ui_core.type.primaire.DpSize
 import com.tezov.lib_adr_ui_core.type.primaire.dpSize
 
-val PageDiscoverTheme.colors: PageDiscoverTheme.Colors
+val PageCartTheme.colors: PageCartTheme.Colors
     @Composable
     @ReadOnlyComposable
     get() = localColors.current
 
-infix fun PageDiscoverTheme.provides(value: PageDiscoverTheme.Colors) = localColors provides value
+infix fun PageCartTheme.provides(value: PageCartTheme.Colors) = localColors provides value
 
-val PageDiscoverTheme.typographies: PageDiscoverTheme.Typographies
+val PageCartTheme.typographies: PageCartTheme.Typographies
     @Composable
     @ReadOnlyComposable
     get() = localTypographies.current
 
-infix fun PageDiscoverTheme.provides(value: PageDiscoverTheme.Typographies) =
+infix fun PageCartTheme.provides(value: PageCartTheme.Typographies) =
     localTypographies provides value
 
-val PageDiscoverTheme.dimensions: PageDiscoverTheme.Dimensions
+val PageCartTheme.dimensions: PageCartTheme.Dimensions
     @Composable
     @ReadOnlyComposable
     get() = localDimensions.current
 
-infix fun PageDiscoverTheme.provides(value: PageDiscoverTheme.Dimensions) =
+infix fun PageCartTheme.provides(value: PageCartTheme.Dimensions) =
     localDimensions provides value
 
-val PageDiscoverTheme.styles: PageDiscoverTheme.Style
+val PageCartTheme.styles: PageCartTheme.Style
     @Composable
     @ReadOnlyComposable
     get() = localStyles.current
 
-infix fun PageDiscoverTheme.provides(value: PageDiscoverTheme.Style) = localStyles provides value
+infix fun PageCartTheme.provides(value: PageCartTheme.Style) = localStyles provides value
 
-object PageDiscoverTheme {
+object PageCartTheme {
 
     data class Colors(
         val background: Color,

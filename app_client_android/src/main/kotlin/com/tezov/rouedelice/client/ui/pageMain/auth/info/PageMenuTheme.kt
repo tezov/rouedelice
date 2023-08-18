@@ -13,29 +13,29 @@ import com.tezov.lib_adr_ui_core.theme.style.OutfitText.StateColor.Style.Compani
 import com.tezov.lib_adr_ui_core.theme.style.OutfitTextStateColor
 import com.tezov.lib_adr_ui_core.theme.theme.*
 
-val PageHelpTheme.colors: PageHelpTheme.Colors
+val PageMenuTheme.colors: PageMenuTheme.Colors
     @Composable
     @ReadOnlyComposable
     get() = localColors.current
 
-infix fun PageHelpTheme.provides(value: PageHelpTheme.Colors) = localColors provides value
+infix fun PageMenuTheme.provides(value: PageMenuTheme.Colors) = localColors provides value
 
-val PageHelpTheme.typographies: PageHelpTheme.Typographies
+val PageMenuTheme.typographies: PageMenuTheme.Typographies
     @Composable
     @ReadOnlyComposable
     get() = localTypographies.current
 
-infix fun PageHelpTheme.provides(value: PageHelpTheme.Typographies) =
+infix fun PageMenuTheme.provides(value: PageMenuTheme.Typographies) =
     localTypographies provides value
 
-val PageHelpTheme.styles: PageHelpTheme.Style
+val PageMenuTheme.styles: PageMenuTheme.Style
     @Composable
     @ReadOnlyComposable
     get() = localStyles.current
 
-infix fun PageHelpTheme.provides(value: PageHelpTheme.Style) = localStyles provides value
+infix fun PageMenuTheme.provides(value: PageMenuTheme.Style) = localStyles provides value
 
-object PageHelpTheme {
+object PageMenuTheme {
 
     data class Colors(
         val background: Color,
