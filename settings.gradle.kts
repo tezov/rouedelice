@@ -3,27 +3,46 @@ include(
     ":app_client_ios",
     ":app_client_android",
     ":app_client_shared",
+
     ":lib_adr_app_core",
     ":lib_adr_ui_cpt",
     ":lib_adr_ui_core",
     ":lib_adr_core",
+
+    ":lib_ios_app_core",
+    ":lib_ios_ui_cpt",
+    ":lib_ios_ui_core",
+    ":lib_ios_core",
+
     ":lib_kmm_core",
-//    ":lib_test_common",
-//    ":lib_test_common_unit",
-//    ":lib_test_common_integration",
 )
 
+//ANDROID
+val libAdrBasePath = "../../libs/lib_adr/"
 project(":lib_adr_app_core")
-    .projectDir = file("../../lib_adr_app_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_app_core/")
 project(":lib_adr_ui_cpt")
-    .projectDir = file("../../lib_adr_ui_cpt/")
+    .projectDir = file("${libAdrBasePath}lib_adr_ui_cpt/")
 project(":lib_adr_ui_core")
-    .projectDir = file("../../lib_adr_ui_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_ui_core/")
 project(":lib_adr_core")
-    .projectDir = file("../../lib_adr_core/")
-project(":lib_kmm_core")
-    .projectDir = file("../../lib_kmm_core/")
+    .projectDir = file("${libAdrBasePath}lib_adr_core/")
 
+//IOS
+val libIosBasePath = "../../libs/lib_ios/"
+project(":lib_ios_app_core")
+    .projectDir = file("${libIosBasePath}lib_ios_app_core/")
+project(":lib_ios_ui_cpt")
+    .projectDir = file("${libIosBasePath}lib_ios_ui_cpt/")
+project(":lib_ios_ui_core")
+    .projectDir = file("${libIosBasePath}lib_ios_ui_core/")
+project(":lib_ios_core")
+    .projectDir = file("${libIosBasePath}lib_ios_core/")
+
+//KMM
+val libKmmBasePath = "../../libs/lib_kmm/"
+project(":lib_kmm_core")
+    .projectDir = file("${libKmmBasePath}lib_kmm_core/")
 
 pluginManagement {
 

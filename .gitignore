@@ -1,0 +1,17 @@
+.idea
+*.iml
+.gradle
+/gradle.properties
+/gradle
+/gradlew
+/gradlew.bat
+.DS_Store
+build
+captures
+.externalNativeBuild
+.cxx
+local.properties
+/Pods
+/Podfile.lock
+/app_client_ios/app_client.xcodeproj/xcuserdata/*
+/app_client_ios/app_client.xcworkspace/xcuserdata/*

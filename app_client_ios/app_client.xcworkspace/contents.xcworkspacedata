@@ -2,9 +2,21 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../../../libs/lib_ios/lib_ios_core/lib_ios_core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../libs/lib_ios/lib_ios_ui_core/lib_ios_ui_core.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../libs/lib_ios/lib_ios_ui_cpt/lib_ios_ui_cpt.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:../../../libs/lib_ios/lib_ios_app_core/lib_ios_app_core.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:app_client.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:../Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
