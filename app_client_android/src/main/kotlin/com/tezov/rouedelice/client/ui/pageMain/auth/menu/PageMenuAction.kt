@@ -1,6 +1,6 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.info
+package com.tezov.rouedelice.client.ui.pageMain.auth.menu
 
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
@@ -8,7 +8,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PageMenuAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PageMenuState> {
+    PageAction<PageMenuState>() {
 
 
     companion object {

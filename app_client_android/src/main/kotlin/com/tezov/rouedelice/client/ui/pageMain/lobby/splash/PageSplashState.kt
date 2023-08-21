@@ -4,7 +4,7 @@ package com.tezov.rouedelice.client.ui.pageMain.lobby.splash
 
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
-class PageSplashState private constructor() : PageState {
+class PageSplashState private constructor() : PageState() {
 
     companion object {
 

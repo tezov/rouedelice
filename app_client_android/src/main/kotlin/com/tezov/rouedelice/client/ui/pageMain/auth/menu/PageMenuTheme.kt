@@ -1,6 +1,6 @@
 
 
-package com.tezov.rouedelice.client.ui.pageMain.auth.info
+package com.tezov.rouedelice.client.ui.pageMain.auth.menu
 
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable

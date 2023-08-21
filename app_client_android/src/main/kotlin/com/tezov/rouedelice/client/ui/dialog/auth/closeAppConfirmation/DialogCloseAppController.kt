@@ -3,7 +3,7 @@
 package com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation
 
 import androidx.compose.runtime.Composable
-import com.tezov.rouedelice.client.navigation.NavigationRoutes.Route
+import com.tezov.rouedelice.client.navigation.NavigationRouteManager.Route
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
 import com.tezov.lib_adr_app_core.navigation.NavigationController
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction

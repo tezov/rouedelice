@@ -1,6 +1,5 @@
 workspace 'app_client_ios/app_client.xcworkspace'
-platform :ios, '14.1'
-use_frameworks!
+platform :ios, '14.0'
 
 #Dependencies version
 #TODO
@@ -8,8 +7,8 @@ use_frameworks!
 #Dependencies Path
 #TODO
 def pods_dependencies
-  pod 'SwiftDate', :git=> 'https://github.com/malcommac/SwiftDate.git', :tag => '7.0.0'
-  pod 'SwifterSwift/SwiftStdlib', :git=> 'https://github.com/SwifterSwift/SwifterSwift.git', :tag => '5.3.0'
+  #pod 'SwiftDate', :git=> 'https://github.com/malcommac/SwiftDate.git', :tag => '7.0.0'
+  #pod 'SwifterSwift/SwiftStdlib', :git=> 'https://github.com/SwifterSwift/SwifterSwift.git', :tag => '5.3.0'
 end
 
 

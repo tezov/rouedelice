@@ -8,8 +8,8 @@ import com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopAction
 import com.tezov.rouedelice.client.ui.pageMain.auth.shop.PageShopState
 import com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartAction
 import com.tezov.rouedelice.client.ui.pageMain.auth.cart.PageCartState
-import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction
-import com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState
+import com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuAction
+import com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuState
 import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckAction
 import com.tezov.rouedelice.client.ui.pageMain.auth.check.PageCheckState
 import com.tezov.rouedelice.client.ui.pageMain.lobby.lounge.PageLoungeAction

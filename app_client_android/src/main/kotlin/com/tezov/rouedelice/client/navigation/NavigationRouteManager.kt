@@ -12,7 +12,7 @@ import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.SnackbarA
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
-class NavigationRoutes(
+class NavigationRouteManager(
     val controller: com.tezov.lib_adr_app_core.navigation.NavigationController,
     private val snackbarAction: SnackbarAction,
 ) : com.tezov.lib_adr_app_core.navigation.NavigationController.Friend {
@@ -30,6 +30,10 @@ class NavigationRoutes(
                     askedBy = null
                 )
             }
+
+            override fun newInstance() = NotHandled(request = request)
+
+            override val isReadOnly get() = this === default
         }
 
         //Graph        *********************************************
@@ -54,16 +58,17 @@ class NavigationRoutes(
         val startNavRoute = NavAuth
         val startLobbyRoute = Splash
         val startAuthRoute = Shop
+
     }
 
     init {
-        controller.routes(this@NavigationRoutes).apply {
+        controller.routes(this@NavigationRouteManager).apply {
             add(NavLobby)
             add(NavAuth)
             add(NotHandled())
         }
         controller.addRequestHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             mapOf(
                 TopAppBarAction::class to this::navigateFromTopAppBar,
                 BottomNavigationAction::class to this::navigateFromBottomNavigation,
@@ -72,27 +77,27 @@ class NavigationRoutes(
             )
         )
         controller.setRequestExceptionHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             this::navigateException,
         )
         controller.setRequestFeedbackHandler(
-            this@NavigationRoutes,
+            this@NavigationRouteManager,
             this::navigateFeedback,
         )
     }
 
     private fun navigateFeedback(request: Request) {
-         (request.to as? RequestFeedback)?.let {
+         (request.to as? NavigationRouteManager.Route.RequestFeedback)?.let {
             //navigation is busy, request was refused
         }
     }
 
     private fun navigateException(request: Request?) {
         request?.let {
-            (request.to as? NotHandled)?.request?.takeIf { it.to is NotImplemented }?.let {
+            (request.to as? NotHandled)?.request?.takeIf { it.to is NavigationRouteManager.Route.NotImplemented }?.let {
                 return navigateException(it)
             }
-            (request.to as? NotImplemented)?.let {
+            (request.to as? NavigationRouteManager.Route.NotImplemented)?.let {
                 snackbarAction.showNotImplemented(it.message)
             } ?: (request.to as? NotHandled)?.let {
                 snackbarAction.show("forget to handle route from ${it.request?.from?.path} to ${it.request?.to?.path}")
@@ -106,9 +111,9 @@ class NavigationRoutes(
         with(controller) {
             var failedToNavigate = true
             when (request.to) {
-                Back -> {
+                is NavigationRouteManager.Route.Back -> {
                     navigateBack(
-                        this@NavigationRoutes,
+                        this@NavigationRouteManager,
                         request = request
                     )
                     failedToNavigate = false
@@ -123,7 +128,7 @@ class NavigationRoutes(
     private fun navigateFromBottomNavigation(request: Request) {
         with(controller) {
             navigate(
-                this@NavigationRoutes,
+                this@NavigationRouteManager,
                 request = request.apply {
                     option = option ?: Option.SingleTop(request.to)
                 }
@@ -140,7 +145,7 @@ class NavigationRoutes(
                     when (request.to) {
                         Lounge -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request = request.apply {
                                     option = option ?: Option.ClearStack()
                                 }
@@ -162,9 +167,9 @@ class NavigationRoutes(
             when (request.from) {
                 Shop, Cart, Check, Menu  -> {
                     when (request.to) {
-                        Finish -> {
+                        is NavigationRouteManager.Route.Finish -> {
                             navigate(
-                                this@NavigationRoutes,
+                                this@NavigationRouteManager,
                                 request
                             )
                             failedToNavigate = false

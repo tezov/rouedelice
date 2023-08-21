@@ -4,13 +4,13 @@ package com.tezov.rouedelice.client.ui.dialog.auth.closeAppConfirmation
 
 import androidx.compose.runtime.Composable
 import com.tezov.lib_adr_app_core.navigation.NavigationController
-import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Finish
+import com.tezov.lib_adr_app_core.navigation.NavigationRouteManager.Route.Finish
 import com.tezov.lib_adr_app_core.ui.compositionTree.modal.dialog.DialogAction
 
 class DialogCloseAppConfirmationAction private constructor(
     private val action: com.tezov.lib_adr_app_core.ui.composition.activity.sub.dialog.DialogAction,
     private val navigationController: NavigationController,
-) : DialogAction<DialogCloseAppConfirmationState> {
+) : DialogAction<DialogCloseAppConfirmationState>() {
 
     companion object {
         @Composable
@@ -28,7 +28,7 @@ class DialogCloseAppConfirmationAction private constructor(
     }
 
     fun onClickConfirm() {
-        navigationController.requestNavigate(Finish, this)
+        navigationController.requestNavigate(Finish(), this)
         action.close()
     }
 

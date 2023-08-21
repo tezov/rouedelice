@@ -3,13 +3,13 @@
 package com.tezov.rouedelice.client.ui.activity
 
 import androidx.compose.runtime.Composable
-import com.tezov.rouedelice.client.navigation.NavigationRoutes
+import com.tezov.rouedelice.client.navigation.NavigationRouteManager
 import com.tezov.lib_adr_app_core.ui.composition.activity.sub.snackbar.SnackbarAction
 import com.tezov.lib_adr_app_core.ui.compositionTree.activity.ActivityAction
 
 class MainActivityAction private constructor(
-    val navigationRoutes: NavigationRoutes,
-) : ActivityAction<MainActivityState> {
+    val navigationController: NavigationRouteManager,
+) : ActivityAction<MainActivityState>() {
 
     companion object {
         @Composable
@@ -18,7 +18,7 @@ class MainActivityAction private constructor(
             snackbarAction: SnackbarAction,
         ): MainActivityAction {
             return MainActivityAction(
-                navigationRoutes = NavigationRoutes(
+                navigationController = NavigationRouteManager(
                     controller = navigationController,
                     snackbarAction = snackbarAction,
                 ),

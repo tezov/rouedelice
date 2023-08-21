@@ -10,7 +10,7 @@ class PageShopAction private constructor(
     private val navigationController: NavigationController,
     private val bottomsheetAction: BottomSheetAction,
 ) :
-    PageAction<PageShopState> {
+    PageAction<PageShopState>() {
 
     companion object {
 

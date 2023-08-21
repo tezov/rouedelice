@@ -83,3 +83,4 @@ dependencyResolutionManagement {
     }
 }
 
+include(":test")

@@ -5,7 +5,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import com.tezov.rouedelice.client.ui.di.accessor.DiAccessorAppUiPage
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator.GraphEntry
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.state

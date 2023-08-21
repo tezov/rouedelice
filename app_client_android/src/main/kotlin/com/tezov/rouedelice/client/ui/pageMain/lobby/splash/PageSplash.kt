@@ -9,7 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
-import com.tezov.lib_adr_app_core.navigation.navigator.GraphEntry
+import com.tezov.lib_adr_app_core.navigation.navigator.ComposableNavigator.GraphEntry
 import com.tezov.lib_adr_app_core.ui.compositionTree.page.Page
 import com.tezov.lib_adr_app_core.ui.di.common.ExtensionCoreUi.action
 import com.tezov.lib_adr_ui_core.theme.theme.colorsExtended

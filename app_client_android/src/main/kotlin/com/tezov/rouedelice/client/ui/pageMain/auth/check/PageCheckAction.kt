@@ -8,7 +8,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 class PageCheckAction private constructor(
     private val navigationController: NavigationController,
 ) :
-    PageAction<PageCheckState> {
+    PageAction<PageCheckState>() {
 
 
     companion object {

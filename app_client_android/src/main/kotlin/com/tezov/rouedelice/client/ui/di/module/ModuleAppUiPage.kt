@@ -119,9 +119,9 @@ interface ModuleAppUiPage {
 
         @ScopeAppUiPage
         class PageHelpState @Inject constructor() :
-            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState>() {
+            ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuState>() {
             @androidx.compose.runtime.Composable
-            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuState.create()
+            override fun create() = com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuState.create()
         }
 
         @ScopeAppUiPage
@@ -189,10 +189,10 @@ interface ModuleAppUiPage {
         @ScopeAppUiPage
         class PageHelpAction @Inject constructor(
             private val navigationController: ModuleCoreUiActivity.Action.NavigationController,
-        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction>() {
+        ) : ComposableWrapper<com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuAction>() {
             @androidx.compose.runtime.Composable
             override fun create() =
-                com.tezov.rouedelice.client.ui.pageMain.auth.info.PageMenuAction.create(
+                com.tezov.rouedelice.client.ui.pageMain.auth.menu.PageMenuAction.create(
                     navigationController.get()
                 )
         }

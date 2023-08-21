@@ -8,7 +8,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageState
 
 class PageLoungeState private constructor(
 
-) : PageState {
+) : PageState() {
 
     companion object {
 

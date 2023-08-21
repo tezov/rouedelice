@@ -7,7 +7,7 @@ import com.tezov.lib_adr_app_core.ui.compositionTree.page.PageAction
 
 class PageLoungeAction private constructor(
     private val navigationController: NavigationController,
-) : PageAction<PageLoungeState> {
+) : PageAction<PageLoungeState>() {
 
     companion object {
 
