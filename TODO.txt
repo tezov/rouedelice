@@ -1,0 +1,4 @@
+
+- remove Notifier and replace by kotlin flow
+- continuer Navigation Swift UI sans les animation jusque BottomNavigation
+
