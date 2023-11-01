@@ -17,7 +17,7 @@ target 'app_client' do
   project 'app_client_ios/app_client.xcodeproj'
   use_frameworks!
   
-  pod 'app_client_shared', :path => 'app_client_shared'
+#  pod 'app_client_shared', :path => 'app_client_shared'
   
   
 end
