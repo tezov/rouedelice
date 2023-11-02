@@ -1,6 +1,3 @@
-plugins {
-    id("com.tezov.plugin_project.catalog")
-}
 
 tezovCatalog {
     catalogFile = catalogFromFile("${project.projectDir}/catalog.rouedelice.yaml")
