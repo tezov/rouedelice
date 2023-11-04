@@ -7,33 +7,34 @@ sub_domain: rouedelice
 dependencies : ${file://../../catalog.dependencies.yaml}
 
 #Modules configuration
-app_client_android:
-  - ${plugin.application}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_app_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_cpt:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_ui_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_adr_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
-lib_kmm_core:
-  - ${plugin.library}
-  - ${plugin.kotlin}
-  - ${plugin.kapt}
-  - ${plugin.tezov_project_config}
+plugins_apply_to:
+  app_client_android:
+    - ${plugins.application}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_app_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_ui_cpt:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_ui_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_adr_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}
+  lib_kmm_core:
+    - ${plugins.library}
+    - ${plugins.kotlin}
+    - ${plugins.kapt}
+    - ${plugins.tezov_project_config}

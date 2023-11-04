@@ -1,8 +1,5 @@
 
 tezovCatalog {
-    catalogFile = catalogFromFile("${project.projectDir}/catalog.rouedelice.yaml")
-    configureProjects()
-
 //    val ignore_alpha = true
 //    val ignore_beta = false
 //    val ignore_rc = false
